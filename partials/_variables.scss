@@ -1,0 +1,15 @@
+$design-orange: #cc5010;
+$design-grey: #24292d;
+$design-beige: #ebe5d7;
+
+$main-font: 'Open Sans', sans-serif;
+$stylistic-font: 'Great Vibes', cursive;
+
+// Mixins
+
+@mixin flex-container($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    align-items: center;
+}
