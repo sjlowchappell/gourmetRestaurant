@@ -11,11 +11,14 @@
 <body>
     <header>
         <nav>
+            <!-- Hamburger menu that toggles on when screen is below 100px -->
             <label for="toggle"><i class="fa fa-bars fab"></i></label>
-            <input type="checkbox" class="toggle" id="toggle">
+            <input type="checkbox" class="toggle" id="toggle" name="navToggle">
 
             <div class="navBar flex-container-column">
-                <div><img src="./assets/logo.png" alt=""></div>
+                <div>
+                    <img src="./assets/logo.png" alt="The Gourmet Logo">
+                </div>
                 <ul class="flex-container-column">
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
                     <li><a href="#about"><i class="fas fa-chevron-right"></i>  About</a></li>
@@ -25,14 +28,15 @@
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
                 <div class="flex-container-row">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-google-plus-g"></i>
+                    <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="http://www.google.com"><i class="fab fa-google-plus-g"></i></a>   
                 </div>
                 <p>C 2015 The Gourmet</p>
             </div>
         </nav>
-        
+
+        <!-- Main Header Content -- Design files came with images for header text *shrug* -->
         <div class="headerContent flex-container-column">
             <div>
                 <img src="./assets/genuine.png" alt="Genuine">
@@ -43,20 +47,18 @@
             <div>
                 <img src="./assets/cookingsince.png" alt="Cooking Since 2001">
             </div>
-        </div>
-        <a href="#">
-            <button class="flex-container-row">
-                <img src="./assets/eye.png" alt="eye">
-                <p>
-                    View Details
-                </p>    
+            <button>
+                <a href="#about" class="flex-container-row">
+                    <img src="./assets/eye.png" alt="eye">
+                    <p>View Details</p>
+                </a>
             </button>
-        </a>
+        </div>
     </header>
 
     <section id="about" class="about">
         <div class="flex-container-row">
-            <div class="abt-text">
+            <div class="abtText">
                 <h2><span class="orangeText">About</span> Our Chefs</h2>
                 <div class="flex-container-row">
                     <div class="chefPic">
@@ -70,7 +72,7 @@
                 <p class="italic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni possimus consectetur.</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo voluptas nostrum id architecto, alias eaque quis aspernatur et hic repellat impedit at dolorum velit molestiae, nulla ab nobis nisi commodi! </p>
             </div>
-            <div class="rgt-img">
+            <div class="rgtImg">
                 <img src="./assets/rsz_chefpic.jpg" alt="">
             </div>
         </div>
@@ -94,18 +96,18 @@
         </nav>
 
         <div class="gallery">
-            <div class="galleryItem galleryItem1"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem2"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem3"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem4"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem5"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
         </div>
         <div class="gallery">
-            <div class="galleryItem galleryItem6"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem7"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem8"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem9"><img src="./assets/header.jpg" alt=""></div>
-            <div class="galleryItem galleryItem10"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
+            <div class="galleryItem"><img src="./assets/header.jpg" alt=""></div>
         </div>
     </section>
 
@@ -233,31 +235,32 @@
 
     <section id="contact" class="contact">
         <div class="wrapper">
-            <div class="flex-container-row contactBox">
-                <div class="contactSection">
-                    <img src="./assets/logo2.png" alt="">
-                    <div class="flex-container-row icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-google-plus-g"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin-in"></i>
+            <div class="flex-container-row contactContainer">
+                <div class="contactFormFrame">
+                    <img src="./assets/logo2.png" alt="The Gourmet Logo">
+                    <div class="flex-container-row contactIcons">
+                        <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="http://www.google.com"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <form action="" class="flex-container-column">
                     <h2><span class="orangeText">Contact</span> Us</h2>
-                    <label for="name">Name:*</label>
-                    <input class="contactInput" type="text" id="name" placeholder="Jane Doe" required>
 
-                    <label for="email">Email:*</label>
-                    <input class="contactInput" type="email" id="email" placeholder="janedoe@gmail.com" required>
+                    <label for="name">Name:<span class="orangeText">*</span></label>
+                    <input class="contactInput" type="text" id="name" name="contactFormName" placeholder="Jane Doe" required>
 
-                    <label for="message">Message:*</label>
-                    <textarea class="contactInput" name="message" id="message" placeholder="Message" rows="5" required></textarea>
+                    <label for="email">Email:<span class="orangeText">*</span></label>
+                    <input class="contactInput" type="email" id="email" name="contactFormEmail" placeholder="janedoe@gmail.com" required>
+
+                    <label for="message">Message:<span class="orangeText">*</span></label>
+                    <textarea class="contactInput" name="contactFormMessage" id="message" placeholder="Message" rows="5" required></textarea>
                     
                     <button>Send Message</button>
                 </form>
-                <div class="contactSection contactInfoContainer">
+                <div class="contactFormFrame contactInfoContainer">
                     <div class="contactInfo">
                         <img class="contactInfoItem" src="./assets/locationicon.png" alt="">
                         <div class="contactInfoItem">

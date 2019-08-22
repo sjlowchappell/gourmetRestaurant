@@ -5,96 +5,146 @@ h1, h2, h3, h4, p, a, ul, li, nav {
     list-style: none;
 }
 
-body {
-    font-family: $main-font;
-    font-size: 2rem;
-}
+// General styles, typography, and layout
 
-h2 {
-    font-family: $stylistic-font;
-    font-size: 6rem;
-    line-height: 6rem;
-    padding: 3rem 0px;
-}
+    html {
+        font-size: 62.5%;
+        line-height: 1.8rem;
+        scroll-behavior: smooth;
+    }
 
-h3 {
-    font-size: 3rem;
-}
+    .wrapper {
+        max-width: 1080px;
+        padding: 0px 15px;
+        margin: 0 auto;
+    }
 
-h4 {
-    font-size: 2.5rem;
-}
+    img {
+        max-width: 100%;
+    }
 
+    body {
+        font-family: $main-font;
+        font-size: 2rem;
+    }
 
-.fab {
-    color: #778892;
-    padding: 0px 10px;
-}
+    h2 {
+        font-family: $stylistic-font;
+        font-size: 6rem;
+        line-height: 6rem;
+        padding: 3rem 0px;
+    }
 
+    h3 {
+        font-size: 3rem;
+    }
 
-.italic {
-    font-style: italic;
-    padding: 15px 0px;
-}
+    h4 {
+        font-size: 2.5rem;
+    }
 
-.orangeText {
-    color: $design-orange;
-}
+    p {
+        color: grey;
+    }
 
-p {
-    color: grey;
-}
+    .contactInfo, .featured ul, .menuItem p {
+        font-size: 1.4rem;
+    }
 
-.flex-container-row {
-    @include flex-container(row);
-}
+    .fab {
+        color: #778892;
+        padding: 0px 10px;
+    }
 
-.flex-container-column {
-    @include flex-container(column);
-}
+    .orangeText {
+        color: $design-orange;
+    }
 
-.sectionDescription {
-    max-width: 60%;
-    margin: 0 auto;
-    font-style: italic;
-}
+    .flex-container-row {
+        @include flex-container(row);
+    }
+
+    .flex-container-column {
+        @include flex-container(column);
+    }
+
+    .sectionDescription {
+        max-width: 60%;
+        margin: 0 auto;
+        font-style: italic;
+    }
+
+    button {
+        background-color: $design-orange;
+        border: none;
+        text-transform: uppercase;
+        padding: 15px 30px;
+        margin: 40px auto;  
+        p {
+            padding-left: 10px;
+            color: white;
+        }
+        &:hover {
+            background-color: darken($design-orange, 10);
+        }
+    }
+
+    a:hover, a:hover .fas, a:hover .fab {
+        color: $design-orange;
+    }
+
+// End general styles, typography, and layout
 
 header {
     background-image: url(../assets/headerImage.jpg);
     background-color: grey;
     background-blend-mode: multiply;
-    height: 100vh;
     background-repeat: no-repeat;
     background-position: 50% 30%;
     background-size: cover;
+    height: 100vh;
+    padding: 0px 15px;
 
     nav {
-        position: fixed;
         height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
         z-index: 999;
+        transition: all .6s;
+        
         input[type="checkbox"] {
             display: none;
         }
-        label[for="toggle"] {
-            font-size: 60px;
+
+        label[for="toggle"]  {
+            font-size: 50px;
             position: fixed;
             top: 20px;
             right: -200px;
             transition: all .2s;
+
             .fab {
                 color: white;
             }
+            &:hover {
+                cursor: pointer; 
+            }
+            &:hover .fab {
+                color: $design-orange;
+            }
+
         }
+
         .navBar {
-            position: fixed;
-            top: 0;
-            left: 0;
+            background: rgba(0, 0, 0, .8);
             max-width: 10%;
             min-width: 120px;
             height: 100%;
             padding: 40px 5px;
-            background: rgba(0, 0, 0, .8);
-            transition: all 1s;
+            position: fixed;
+            transition: all .5s;
+
             .flex-container-column{
                 align-items: flex-start;
             }
@@ -104,51 +154,32 @@ header {
             a, p {
                 color: #778892;
                 text-align: center;
-                &:hover {
-                    color: white;
-                }
+            }
+            a:hover {
+                color: white;
             }
         }
     }
     .headerContent {
-        height: 70%;
+        height: 80%;
         padding-top: 20vh;
-    }
-    a {
-        margin: 0 auto;
-    }
-}
-
-button {
-    background-color: $design-orange;
-    border: none;
-    text-transform: uppercase;
-    padding: 15px 30px;
-    margin: 40px auto;
-    
-    p {
-        padding-left: 10px;
-        color: white;
     }
 }
 
 .about {
     background-color: $design-beige;
    
-    .rgt-img, .abt-text {
+    .rgtImg, .abtText {
         flex: 1 0 50%;
     }
     
-    .abt-text {
+    .abtText {
         padding: 50px 5% 50px 11%;
         .orangeText {
             padding: 10px 0px;
         }
-        .italic {
-            color: black;
-        }
         .chefPic {
-            flex: 1 0 35%;
+            flex: 1 0 auto;
             max-width: 25%;
             filter: grayscale(1);
         }
@@ -156,55 +187,55 @@ button {
             border-radius: 100%;
         }
         .chefTxt {
-            flex: 1 0 65%;
+            flex: 1 0 auto;
             max-width: 70%;
+        }
+        .italic {
+            font-style: italic;
+            padding: 15px 0px;
+            color: black
         }
     }
 }
 
 .featured, .services, .menu, .contact {
     text-align: center;
+    padding: 80px 0px;
 }
 
 .featured {
-    color: $design-beige;
     background: $design-grey;
-    padding-top: 50px;
-    h2, p, a {
+    padding-bottom: 0;
+
+    h2, p, a, li {
         color: $design-beige;
-    }
-    ul {
-        max-width: 40%;
-        margin: 70px auto;
-        text-transform: uppercase;
-        background: rgba(0, 0, 0, .2);
-        padding: 10px 30px;
-        font-size: 1.4rem;
-    }
-    .gallery {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        .galleryItem {
-            flex: 1 0 150px;
-        }
     }
     a:hover {
         color: $design-orange;
+    }
+    ul {
+        background: rgba(0, 0, 0, .2);
+        text-transform: uppercase;
+        max-width: 40%;
+        margin: 70px auto;
+        padding: 10px 30px;
+    }
+    .gallery {
+        @include flex-container(row);
+        flex-wrap: wrap;
+        .galleryItem {
+            flex: 1 0 150px;
+            max-width: 300px;
+        }
     }
 }
 
 .services {
     background: $design-beige;
-    padding: 80px 0px;
-
     .flex-container-row {
         padding-top: 60px;
     }
     .services-item {
-        flex: 1 0 23%;
         max-width: 23%;
         h3 {
             padding: 30px 0px;
@@ -219,15 +250,13 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 80px 0px;
     color: $design-beige;
-    .flex-container-column {
-        padding: 40px 0px;
-    }
+
     .flex-container-column {
         align-items: flex-start;
         text-align: left;
-        flex: 1 0 30%;
+        padding: 40px 0px;
+        flex: 1 0 auto;
         max-width: 45%;
     }
     .menuItem {
@@ -236,7 +265,6 @@ button {
         p {
             color: $design-beige;
             font-style: italic;
-            font-size: 1.4rem;
         }
     }
     
@@ -247,84 +275,94 @@ button {
     background-image: url(../assets/map.png);
     background-repeat: no-repeat;
     background-position: 100% 0%;
+
     p {
         color: #778892;
     }
-
-    .contactBox {
-        padding-top: 200px;
+    .contactContainer {
+        padding-top: 100px;
         align-items: flex-end;
-        .icons {
+        .contactIcons {
             padding-top: 30px;
         }
+    }
+    .contactFormFrame {
+        padding: 0px 10px 150px 10px;
     }
     form {
         align-items: flex-start;
         background-color: $design-beige;
-        padding: 20px 50px;
+        padding: 30px;
         flex: 1 0 60%;
         h2 {
             align-self: center;
         }
         .contactInput {
-            margin: 10px 0px;
             width: 100%;
-            max-width: 700px;
+            margin: 10px 0px;
+            padding: 10px;
             resize: none;
         }
-    }
-    .contactSection {
-        flex: 1 0 15%;
-        padding-bottom: 150px;
-    }
-
-    .contactInfo {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: left;
-        padding: 10px 0px;
-        font-size: 1.4rem;
-        .contactInfoItem {
-            padding-left: 5%;
+        button {
+            background-color: darken($design-beige, 20);
+            border: 3px solid black;
+            padding: 25px 60px;
+            color: black;
+            &:hover {
+                background: $design-orange;
+            }
         }
     }
-}
-
-.formMessage {
-    height: 200px;
+    .contactInfo {
+        @include flex-container(row);
+        justify-content: flex-start;
+        text-align: left;
+        .contactInfoItem {
+            padding: 10px;
+        }
+    }
 }
 
 footer {
     background: $design-grey;
     text-align: center;
-    padding: 50px 0px 20px 0px;
+    padding: 20px 0px;
+    p {
+        color: #778892;
+    }
 }
 
 
 // Responsive Starts:
-
-@media (max-width: 1000px) {
-    .sectionDescription {
-        max-width: 80%;
-    }
+@media (max-width: 1300px) {
     header {
+        .navBar{
+            left: -1000px;
+        }
+        input[type="checkbox"]:checked + .navBar{
+            max-width: 100%;
+            left: 0;
+        }
         nav {
-            .navBar{
-                left: -1000px;
-            }
-            input[type="checkbox"]:checked + .navBar{
-                max-width: 100%;
-                left: 0;
-            }
             label[for="toggle"] {
                 right: 20px
             }
         }
     }
+}
+
+@media (max-width: 1000px) {
+    .sectionDescription {
+        max-width: 80%;
+    }
     .about {
-        .rgt-img {
+        .rgtImg {
             display: none;
+        }
+    }
+    .featured {
+        nav ul { 
+            max-width: 60%;
         }
     }
     .services {
@@ -332,20 +370,19 @@ footer {
             flex-wrap: wrap;
         }
         .services-item {
-            flex: 1 0 44%;
             max-width: 44%;
         }
     }
     .contact {
         background-image: none;
-        .contactBox {
+        .contactContainer {
             padding-top: 20px;
             flex-direction: column;
             align-items: center;
             form {
                 width: 100%;
             }
-            .contactSection {
+            .contactFormFrame {
                 padding-bottom: 20px;
             }
             .contactInfoContainer {
@@ -353,9 +390,6 @@ footer {
                 justify-content: space-around;
                 width: 100%;
                 padding: 20px 0px;
-            }
-            .contactInfo {
-                width: 100%;
             }
         }
     }
@@ -367,10 +401,7 @@ footer {
     }
     .featured {
         nav ul {
-            flex-direction: column;
-            .menuSeparator {
-                display: none;
-            }
+            max-width: 80%;
         }
     }
     .services {
@@ -392,19 +423,18 @@ footer {
             }
         }
     }
-    .contact {
-        form {
-            padding: 20px;
-        }
 }
 
 @media (max-width: 600px) {
-        .contactInfoContainer {
-            flex-direction: column;
-            .contactInfo {
-                justify-content: center;
-            }
+    .featured {
+        nav ul {
+            max-width: 95%;
         }
     }
-
+    .contactInfoContainer {
+        flex-direction: column;
+        .contactInfo {
+            justify-content: center;
+        }
+    }
 }
