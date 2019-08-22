@@ -3,7 +3,6 @@ h1, h2, h3, h4, p, a, ul, li, nav {
     padding: 0;
     text-decoration: none;
     list-style: none;
-    // line-height: 1.8rem;
 }
 
 body {
@@ -23,6 +22,13 @@ h3 {
 
 h4 {
     font-size: 2.5rem;
+}
+
+.icons {
+    .fab {
+        color: #778892;
+        padding: 0px 10px;
+    }
 }
 
 .italic {
@@ -60,7 +66,49 @@ header {
     background-repeat: no-repeat;
     background-position: 50% 30%;
     background-size: cover;
-    .flex-container-column {
+
+    nav {
+        position: fixed;
+        height: 100vh;
+        input[type="checkbox"] {
+            display: none;
+        }
+        label[for="toggle"] {
+            font-size: 60px;
+            position: fixed;
+            top: 20px;
+            right: -200px;
+            transition: all .2s;
+            .fab {
+                color: white;
+            }
+        }
+        .navBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: 10%;
+            min-width: 120px;
+            height: 100%;
+            padding: 40px 5px;
+            background: rgba(0, 0, 0, .8);
+            transition: all 1s;
+            .flex-container-column{
+                align-items: flex-start;
+            }
+            ul {
+                height: 250px;
+            }
+            a, p {
+                color: #778892;
+                text-align: center;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+    .headerContent {
         height: 70%;
         padding-top: 20vh;
     }
@@ -90,7 +138,10 @@ button {
     }
     
     .abt-text {
-        padding: 50px 90px;
+        padding: 50px 5% 50px 11%;
+        .orangeText {
+            padding: 10px 0px;
+        }
         .italic {
             color: black;
         }
@@ -135,7 +186,7 @@ button {
         justify-content: center;
         flex-wrap: wrap;
         .galleryItem {
-            flex: 1 0 250px;
+            flex: 1 0 150px;
         }
     }
     a:hover {
@@ -193,20 +244,36 @@ button {
     background-color: $design-grey;
     background-image: url(../assets/map.png);
     background-repeat: no-repeat;
-    height: 100vh;
+    background-position: 100% 0%;
+    p {
+        color: #778892;
+    }
 
-    .flex-container-row {
+    .contactBox {
         padding-top: 200px;
         align-items: flex-end;
+        .icons {
+            padding-top: 30px;
+        }
     }
     form {
+        align-items: flex-start;
         background-color: $design-beige;
         padding: 20px 50px;
-        flex: 1 0 30%;
+        flex: 1 0 60%;
+        h2 {
+            align-self: center;
+        }
+        .contactInput {
+            margin: 10px 0px;
+            width: 100%;
+            max-width: 700px;
+            resize: none;
+        }
     }
     .contactSection {
-        flex: 1 0 25%;
-        padding-bottom: 50px;
+        flex: 1 0 15%;
+        padding-bottom: 150px;
     }
 
     .contactInfo {
@@ -215,14 +282,67 @@ button {
         align-items: center;
         text-align: left;
         padding: 10px 0px;
+        font-size: 1.4rem;
         .contactInfoItem {
-            padding-left: 30px;
+            padding-left: 5%;
         }
     }
+}
+
+.formMessage {
+    height: 200px;
 }
 
 footer {
     background: $design-grey;
     text-align: center;
-    padding: 10px 0px;
+    padding: 50px 0px 20px 0px;
+}
+
+
+// Responsive Starts:
+
+@media (max-width: 1000px) {
+    header {
+        nav {
+            .navBar{
+                left: -1000px;
+            }
+            input[type="checkbox"]:checked + .navBar{
+                max-width: 100%;
+                left: 0;
+            }
+            label[for="toggle"] {
+                // display: block;
+                right: 20px
+            }
+        }
+    }
+    .about {
+        .rgt-img {
+            display: none;
+        }
+    }
+    .contact {
+        background-image: none;
+        .contactBox {
+            padding-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            form {
+                width: 100%;
+            }
+            .contactSection {
+                padding-bottom: 20px;
+            }
+            .contactInfoContainer {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+            .contactInfo {
+                width: 100%;
+            }
+        }
+    }
 }

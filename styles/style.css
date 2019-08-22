@@ -166,6 +166,10 @@ h3 {
 h4 {
   font-size: 2.5rem; }
 
+.icons .fab {
+  color: #778892;
+  padding: 0px 10px; }
+
 .italic {
   font-style: italic;
   padding: 15px 0px; }
@@ -219,7 +223,45 @@ header {
   background-repeat: no-repeat;
   background-position: 50% 30%;
   background-size: cover; }
-  header .flex-container-column {
+  header nav {
+    position: fixed;
+    height: 100vh; }
+    header nav input[type="checkbox"] {
+      display: none; }
+    header nav label[for="toggle"] {
+      font-size: 60px;
+      position: fixed;
+      top: 20px;
+      right: -200px;
+      -webkit-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s; }
+      header nav label[for="toggle"] .fab {
+        color: white; }
+    header nav .navBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      max-width: 10%;
+      min-width: 120px;
+      height: 100%;
+      padding: 40px 5px;
+      background: rgba(0, 0, 0, 0.8);
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
+      header nav .navBar .flex-container-column {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+      header nav .navBar ul {
+        height: 250px; }
+      header nav .navBar a, header nav .navBar p {
+        color: #778892;
+        text-align: center; }
+        header nav .navBar a:hover, header nav .navBar p:hover {
+          color: white; }
+  header .headerContent {
     height: 70%;
     padding-top: 20vh; }
   header a {
@@ -242,7 +284,9 @@ button {
     -ms-flex: 1 0 50%;
     flex: 1 0 50%; }
   .about .abt-text {
-    padding: 50px 90px; }
+    padding: 50px 5% 50px 11%; }
+    .about .abt-text .orangeText {
+      padding: 10px 0px; }
     .about .abt-text .italic {
       color: black; }
     .about .abt-text .chefPic {
@@ -294,8 +338,8 @@ button {
     flex-wrap: wrap; }
     .featured .gallery .galleryItem {
       -webkit-box-flex: 1;
-      -ms-flex: 1 0 250px;
-      flex: 1 0 250px; }
+      -ms-flex: 1 0 150px;
+      flex: 1 0 150px; }
   .featured a:hover {
     color: #cc5010; }
 
@@ -344,23 +388,39 @@ button {
   background-color: #24292d;
   background-image: url(../assets/map.png);
   background-repeat: no-repeat;
-  height: 100vh; }
-  .contact .flex-container-row {
+  background-position: 100% 0%; }
+  .contact p {
+    color: #778892; }
+  .contact .contactBox {
     padding-top: 200px;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end; }
+    .contact .contactBox .icons {
+      padding-top: 30px; }
   .contact form {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     background-color: #ebe5d7;
     padding: 20px 50px;
     -webkit-box-flex: 1;
-    -ms-flex: 1 0 30%;
-    flex: 1 0 30%; }
+    -ms-flex: 1 0 60%;
+    flex: 1 0 60%; }
+    .contact form h2 {
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
+    .contact form .contactInput {
+      margin: 10px 0px;
+      width: 100%;
+      max-width: 700px;
+      resize: none; }
   .contact .contactSection {
     -webkit-box-flex: 1;
-    -ms-flex: 1 0 25%;
-    flex: 1 0 25%;
-    padding-bottom: 50px; }
+    -ms-flex: 1 0 15%;
+    flex: 1 0 15%;
+    padding-bottom: 150px; }
   .contact .contactInfo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -372,14 +432,53 @@ button {
     -ms-flex-align: center;
     align-items: center;
     text-align: left;
-    padding: 10px 0px; }
+    padding: 10px 0px;
+    font-size: 1.4rem; }
     .contact .contactInfo .contactInfoItem {
-      padding-left: 30px; }
+      padding-left: 5%; }
+
+.formMessage {
+  height: 200px; }
 
 footer {
   background: #24292d;
   text-align: center;
-  padding: 10px 0px; }
+  padding: 50px 0px 20px 0px; }
+
+@media (max-width: 1000px) {
+  header nav .navBar {
+    left: -1000px; }
+  header nav input[type="checkbox"]:checked + .navBar {
+    max-width: 100%;
+    left: 0; }
+  header nav label[for="toggle"] {
+    right: 20px; }
+  .about .rgt-img {
+    display: none; }
+  .contact {
+    background-image: none; }
+    .contact .contactBox {
+      padding-top: 20px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .contact .contactBox form {
+        width: 100%; }
+      .contact .contactBox .contactSection {
+        padding-bottom: 20px; }
+      .contact .contactBox .contactInfoContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        width: 100%; }
+      .contact .contactBox .contactInfo {
+        width: 100%; } }
 
 html {
   font-size: 62.5%;
@@ -387,6 +486,7 @@ html {
 
 .wrapper {
   max-width: 1240px;
+  width: 80%;
   padding: 0px 15px;
   margin: 0 auto; }
 

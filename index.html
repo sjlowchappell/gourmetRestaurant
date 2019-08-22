@@ -10,7 +10,28 @@
 </head>
 <body>
     <header>
-        <div class="flex-container-column">
+        <nav class="icons">
+            <label for="toggle"><i class="fa fa-bars fab"></i></label>
+            <input type="checkbox" class="toggle" id="toggle">
+            <div class="navBar flex-container-column">
+                <div><img src="./assets/logo.png" alt=""></div>
+                <ul class="flex-container-column">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i>  About</a></li>
+                    <li><a href="#featured"><i class="fas fa-chevron-right"></i> Featured</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#menu"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+                <div class="flex-container-row">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+                <p>C 2015 The Gourmet</p>
+            </div>
+        </nav>
+        <div class="headerContent flex-container-column">
             <div>
                 <img src="./assets/genuine.png" alt="Genuine">
             </div>
@@ -59,9 +80,13 @@
         <nav>
             <ul class="flex-container-row">
                 <li><a href="">All</a></li>
+                <li>|</li>
                 <li><a href="">Meat</a></li>
+                <li>|</li>
                 <li><a href="">Fish</a></li>
+                <li>|</li>
                 <li><a href="">Vegetarian</a></li>
+                <li>|</li>
                 <li><a href="">Dessert</a></li>
             </ul>
         </nav>
@@ -72,6 +97,8 @@
             <div class="galleryItem galleryItem3"><img src="./assets/header.jpg" alt=""></div>
             <div class="galleryItem galleryItem4"><img src="./assets/header.jpg" alt=""></div>
             <div class="galleryItem galleryItem5"><img src="./assets/header.jpg" alt=""></div>
+        </div>
+        <div class="gallery">
             <div class="galleryItem galleryItem6"><img src="./assets/header.jpg" alt=""></div>
             <div class="galleryItem galleryItem7"><img src="./assets/header.jpg" alt=""></div>
             <div class="galleryItem galleryItem8"><img src="./assets/header.jpg" alt=""></div>
@@ -204,42 +231,47 @@
 
     <section id="contact" class="contact">
         <div class="wrapper">
-            <div class="flex-container-row">
+            <div class="flex-container-row contactBox">
                 <div class="contactSection">
                     <img src="./assets/logo2.png" alt="">
+                    <div class="flex-container-row icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google-plus-g"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
                 </div>
                 <form action="" class="flex-container-column">
                     <h2><span class="orangeText">Contact</span> Us</h2>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name">
+                    <label for="name">Name:*</label>
+                    <input class="contactInput" type="text" id="name" placeholder="Jane Doe" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email">
+                    <label for="email">Email:*</label>
+                    <input class="contactInput" type="email" id="email" placeholder="janedoe@gmail.com" required>
 
-                    <label for="message">Message:</label>
-                    <input type="text" id="message">
-
+                    <label for="message">Message:*</label>
+                    <textarea class="contactInput" name="message" id="message" placeholder="Message" rows="5" required></textarea>
+                    
                     <button>Send Message</button>
                 </form>
-                <div class="contactSection">
-                    <div>
-                        <div class="contactInfo">
-                            <img class="contactInfoItem" src="./assets/locationicon.png" alt="">
-                            <div class="contactInfoItem">
-                                <p>The Gourmet</p>
-                                <p>PO Box 12345</p>
-                                <p>Toronto, ON</p>
-                                <p>M5V 2A9</p>
-                            </div>
+                <div class="contactSection contactInfoContainer">
+                    <div class="contactInfo">
+                        <img class="contactInfoItem" src="./assets/locationicon.png" alt="">
+                        <div class="contactInfoItem">
+                            <p>The Gourmet</p>
+                            <p>PO Box 12345</p>
+                            <p>Toronto, ON</p>
+                            <p>M5V 2A9</p>
                         </div>
-                        <div class="contactInfo">
-                            <img class="contactInfoItem" src="./assets/mobile.png" alt="">
-                            <p class="contactInfoItem">(123) 456-7890</p>
-                        </div>
-                        <div class="contactInfo">
-                            <img class="contactInfoItem" src="./assets/mail.png" alt="">
-                            <p class="contactInfoItem">support@gourmet.com</p>
-                        </div>
+                    </div>
+                    <div class="contactInfo">
+                        <img class="contactInfoItem" src="./assets/mobile.png" alt="">
+                        <p class="contactInfoItem">(123) 456-7890</p>
+                    </div>
+                    <div class="contactInfo">
+                        <img class="contactInfoItem" src="./assets/mail.png" alt="">
+                        <p class="contactInfoItem">support@gourmet.com</p>
                     </div>
                 </div>
             </div>
@@ -252,3 +284,5 @@
     </footer>
 </body>
 </html>
+
+<script src="https://kit.fontawesome.com/6f3eafc547.js"></script>
