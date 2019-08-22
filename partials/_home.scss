@@ -13,6 +13,7 @@ body {
 h2 {
     font-family: $stylistic-font;
     font-size: 6rem;
+    line-height: 6rem;
     padding: 3rem 0px;
 }
 
@@ -24,12 +25,12 @@ h4 {
     font-size: 2.5rem;
 }
 
-.icons {
-    .fab {
-        color: #778892;
-        padding: 0px 10px;
-    }
+
+.fab {
+    color: #778892;
+    padding: 0px 10px;
 }
+
 
 .italic {
     font-style: italic;
@@ -70,6 +71,7 @@ header {
     nav {
         position: fixed;
         height: 100vh;
+        z-index: 999;
         input[type="checkbox"] {
             display: none;
         }
@@ -303,6 +305,9 @@ footer {
 // Responsive Starts:
 
 @media (max-width: 1000px) {
+    .sectionDescription {
+        max-width: 80%;
+    }
     header {
         nav {
             .navBar{
@@ -313,7 +318,6 @@ footer {
                 left: 0;
             }
             label[for="toggle"] {
-                // display: block;
                 right: 20px
             }
         }
@@ -321,6 +325,15 @@ footer {
     .about {
         .rgt-img {
             display: none;
+        }
+    }
+    .services {
+        .flex-container-row {
+            flex-wrap: wrap;
+        }
+        .services-item {
+            flex: 1 0 44%;
+            max-width: 44%;
         }
     }
     .contact {
@@ -339,10 +352,59 @@ footer {
                 display: flex;
                 justify-content: space-around;
                 width: 100%;
+                padding: 20px 0px;
             }
             .contactInfo {
                 width: 100%;
             }
         }
     }
+}
+
+@media (max-width: 800px) {
+    .sectionDescription {
+        max-width: 100%;
+    }
+    .featured {
+        nav ul {
+            flex-direction: column;
+            .menuSeparator {
+                display: none;
+            }
+        }
+    }
+    .services {
+        .flex-container-row {
+            flex-direction: column;
+            .services-item {
+                max-width: 100%;
+                padding: 20px 0px;
+            }
+        }
+    }
+    .menu {
+        .menuGallery {
+            flex-direction: column;
+            align-items: normal;
+            .flex-container-column {
+                max-width: 100%;
+                padding: 0px;
+            }
+        }
+    }
+    .contact {
+        form {
+            padding: 20px;
+        }
+}
+
+@media (max-width: 600px) {
+        .contactInfoContainer {
+            flex-direction: column;
+            .contactInfo {
+                justify-content: center;
+            }
+        }
+    }
+
 }
