@@ -156,6 +156,10 @@ html {
   line-height: 1.8rem;
   scroll-behavior: smooth; }
 
+.outerWrapper {
+  max-width: 2000px;
+  margin: 0 auto; }
+
 .wrapper {
   max-width: 1080px;
   padding: 0px 15px;
