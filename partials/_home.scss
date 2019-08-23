@@ -168,7 +168,10 @@ header {
 
 .about {
     background-color: $design-beige;
-   
+
+    img {
+        display: block;
+    }
     .rgtImg, .abtText {
         flex: 1 0 50%;
     }
@@ -207,6 +210,13 @@ header {
     background: $design-grey;
     padding-bottom: 0;
 
+    .featuredText {
+        padding: 0px 15px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
     h2, p, a, li {
         color: $design-beige;
     }
@@ -223,9 +233,28 @@ header {
     .gallery {
         @include flex-container(row);
         flex-wrap: wrap;
+        h4 {
+            color: white;
+        }
+        p {
+            color: $design-orange;
+        }
         .galleryItem {
-            flex: 1 0 150px;
-            max-width: 300px;
+            flex: 1 0 275px;
+            position: relative;
+            &:hover .galleryItemDescription {
+                display: block;
+            }
+        }
+        .galleryItemDescription {
+            background: rgba(0, 0, 0, .7);
+            width: 100%;
+            height: 100%;
+            padding: 20% 0px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
         }
     }
 }
@@ -337,7 +366,7 @@ footer {
 @media (max-width: 1300px) {
     header {
         .navBar{
-            left: -1000px;
+            left: -500px;
         }
         input[type="checkbox"]:checked + .navBar{
             max-width: 100%;
@@ -426,6 +455,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .about {
+        .abtText {
+            padding: 50px 15px;
+        }
+    }
     .featured {
         nav ul {
             max-width: 95%;
