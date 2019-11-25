@@ -685,12 +685,12 @@ header .header__content {
   max-width: 45%;
 }
 
-.menu .menuItem {
+.menu .menu__item {
   width: 100%;
   padding: 10px 0px;
 }
 
-.menu .menuItem p {
+.menu .menu__item p {
   color: #ebe5d7;
   font-style: italic;
 }
