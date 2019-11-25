@@ -7,15 +7,15 @@
 	p {
 		color: #778892;
 	}
-	.contactContainer {
+	&__container {
 		padding-top: 100px;
 		align-items: flex-end;
-		.contactIcons {
+	}
+	&__sideBar {
+		padding: 0px 10px 150px 10px;
+		&-icons {
 			padding-top: 30px;
 		}
-	}
-	.contactFormFrame {
-		padding: 0px 10px 150px 10px;
 	}
 	form {
 		align-items: flex-start;
@@ -25,7 +25,7 @@
 		h2 {
 			align-self: center;
 		}
-		.contactInput {
+		.contact__input {
 			width: 100%;
 			margin: 10px 0px;
 			padding: 10px;
@@ -41,11 +41,11 @@
 			}
 		}
 	}
-	.contactInfo {
+	&__info {
 		@include flex-container(row);
 		justify-content: flex-start;
 		text-align: left;
-		.contactInfoItem {
+		&-item {
 			padding: 10px;
 		}
 	}

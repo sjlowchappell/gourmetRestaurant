@@ -706,19 +706,19 @@ header .header__content {
   color: #778892;
 }
 
-.contact .contactContainer {
+.contact__container {
   padding-top: 100px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 
-.contact .contactContainer .contactIcons {
-  padding-top: 30px;
+.contact__sideBar {
+  padding: 0px 10px 150px 10px;
 }
 
-.contact .contactFormFrame {
-  padding: 0px 10px 150px 10px;
+.contact__sideBar-icons {
+  padding-top: 30px;
 }
 
 .contact form {
@@ -738,7 +738,7 @@ header .header__content {
       align-self: center;
 }
 
-.contact form .contactInput {
+.contact form .contact__input {
   width: 100%;
   margin: 10px 0px;
   padding: 10px;
@@ -756,7 +756,7 @@ header .header__content {
   background: #cc5010;
 }
 
-.contact .contactInfo {
+.contact__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -776,7 +776,7 @@ header .header__content {
   text-align: left;
 }
 
-.contact .contactInfo .contactInfoItem {
+.contact__info-item {
   padding: 10px;
 }
 
