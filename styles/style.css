@@ -655,11 +655,11 @@ header .header__content {
   padding-top: 60px;
 }
 
-.services .services-item {
+.services .services__item {
   max-width: 23%;
 }
 
-.services .services-item h3 {
+.services .services__item h3 {
   padding: 30px 0px;
 }
 
