@@ -298,6 +298,8 @@ button {
   text-transform: uppercase;
   padding: 15px 30px;
   margin: 40px auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 button p {
@@ -313,6 +315,8 @@ a:hover,
 a:hover .fas,
 a:hover .fab {
   color: #cc5010;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .featured,
