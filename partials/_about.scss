@@ -4,12 +4,12 @@
 	img {
 		display: block;
 	}
-	.rgtImg,
-	.abtText {
+	&__rightImg,
+	&__content {
 		flex: 1 0 50%;
 	}
 
-	.abtText {
+	&__content {
 		padding: 50px 5% 50px 11%;
 		.orangeText {
 			padding: 10px 0px;

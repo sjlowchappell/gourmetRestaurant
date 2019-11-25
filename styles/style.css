@@ -461,7 +461,7 @@ header nav input[type='checkbox'] {
   display: none;
 }
 
-header nav label[for='nav--hamburger'] {
+header nav label[for='nav__hamburger'] {
   font-size: 50px;
   position: fixed;
   top: 20px;
@@ -470,19 +470,19 @@ header nav label[for='nav--hamburger'] {
   transition: all 0.2s;
 }
 
-header nav label[for='nav--hamburger'] .fab {
+header nav label[for='nav__hamburger'] .fab {
   color: white;
 }
 
-header nav label[for='nav--hamburger']:hover {
+header nav label[for='nav__hamburger']:hover {
   cursor: pointer;
 }
 
-header nav label[for='nav--hamburger']:hover .fab {
+header nav label[for='nav__hamburger']:hover .fab {
   color: #cc5010;
 }
 
-header nav .nav--bar {
+header nav .nav__bar {
   background: rgba(0, 0, 0, 0.8);
   max-width: 10%;
   min-width: 120px;
@@ -493,27 +493,27 @@ header nav .nav--bar {
   transition: all 0.5s;
 }
 
-header nav .nav--bar .flex-container-column {
+header nav .nav__bar .flex-container-column {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-header nav .nav--bar ul {
+header nav .nav__bar ul {
   height: 250px;
 }
 
-header nav .nav--bar a,
-header nav .nav--bar p {
+header nav .nav__bar a,
+header nav .nav__bar p {
   color: #778892;
   text-align: center;
 }
 
-header nav .nav--bar a:hover {
+header nav .nav__bar a:hover {
   color: white;
 }
 
-header .header--content {
+header .header__content {
   height: 90%;
   padding-top: 20vh;
 }
@@ -526,22 +526,21 @@ header .header--content {
   display: block;
 }
 
-.about .rgtImg,
-.about .abtText {
+.about__rightImg, .about__content {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
 }
 
-.about .abtText {
+.about__content {
   padding: 50px 5% 50px 11%;
 }
 
-.about .abtText .orangeText {
+.about__content .orangeText {
   padding: 10px 0px;
 }
 
-.about .abtText .chefPic {
+.about__content .chefPic {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -550,18 +549,18 @@ header .header--content {
           filter: grayscale(1);
 }
 
-.about .abtText .headshot {
+.about__content .headshot {
   border-radius: 100%;
 }
 
-.about .abtText .chefTxt {
+.about__content .chefTxt {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   max-width: 70%;
 }
 
-.about .abtText .italic {
+.about__content .italic {
   font-style: italic;
   padding: 15px 0px;
   color: black;
@@ -572,7 +571,7 @@ header .header--content {
   padding-bottom: 0;
 }
 
-.featured .featuredText {
+.featured__content {
   padding: 0px 15px;
 }
 
@@ -600,7 +599,7 @@ header .header--content {
   padding: 10px 30px;
 }
 
-.featured .gallery {
+.featured__gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,26 +617,26 @@ header .header--content {
       flex-wrap: wrap;
 }
 
-.featured .gallery h4 {
+.featured__gallery h4 {
   color: white;
 }
 
-.featured .gallery p {
+.featured__gallery p {
   color: #cc5010;
 }
 
-.featured .gallery .galleryItem {
+.featured__gallery-galleryItem {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 275px;
           flex: 1 0 275px;
   position: relative;
 }
 
-.featured .gallery .galleryItem:hover .galleryItemDescription {
+.featured__gallery-galleryItem:hover .featured__gallery-galleryItemDescription {
   display: block;
 }
 
-.featured .gallery .galleryItemDescription {
+.featured__gallery-galleryItemDescription {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;

@@ -19,7 +19,7 @@ header {
 			display: none;
 		}
 
-		label[for='nav--hamburger'] {
+		label[for='nav__hamburger'] {
 			font-size: 50px;
 			position: fixed;
 			top: 20px;
@@ -37,7 +37,7 @@ header {
 			}
 		}
 
-		.nav--bar {
+		.nav__bar {
 			background: rgba(0, 0, 0, 0.8);
 			max-width: 10%;
 			min-width: 120px;
@@ -62,7 +62,7 @@ header {
 			}
 		}
 	}
-	.header--content {
+	.header__content {
 		height: 90%;
 		padding-top: 20vh;
 	}
