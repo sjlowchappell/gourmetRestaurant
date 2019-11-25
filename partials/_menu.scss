@@ -1,0 +1,25 @@
+.menu {
+	background: url(../assets/restaurantPic.jpg);
+	background-color: $design-grey;
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $design-beige;
+
+	.flex-container-column {
+		align-items: flex-start;
+		text-align: left;
+		padding: 40px 0px;
+		flex: 1 0 auto;
+		max-width: 45%;
+	}
+	.menuItem {
+		width: 100%;
+		padding: 10px 0px;
+		p {
+			color: $design-beige;
+			font-style: italic;
+		}
+	}
+}

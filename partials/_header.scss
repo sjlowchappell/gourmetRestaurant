@@ -1,0 +1,70 @@
+header {
+	background-image: url(../assets/headerImage.jpg);
+	background-color: grey;
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-position: 50% 30%;
+	background-size: cover;
+	height: 100vh;
+	padding: 0px 15px;
+
+	nav {
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		transition: all 0.6s;
+
+		input[type='checkbox'] {
+			display: none;
+		}
+
+		label[for='toggle'] {
+			font-size: 50px;
+			position: fixed;
+			top: 20px;
+			right: -200px;
+			transition: all 0.2s;
+
+			.fab {
+				color: white;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+			&:hover .fab {
+				color: $design-orange;
+			}
+		}
+
+		.navBar {
+			background: rgba(0, 0, 0, 0.8);
+			max-width: 10%;
+			min-width: 120px;
+			height: 100%;
+			padding: 40px 5px;
+			position: fixed;
+			transition: all 0.5s;
+
+			.flex-container-column {
+				align-items: flex-start;
+			}
+			ul {
+				height: 250px;
+			}
+			a,
+			p {
+				color: #778892;
+				text-align: center;
+			}
+			a:hover {
+				color: white;
+			}
+		}
+	}
+	.headerContent {
+		height: 90%;
+		padding-top: 20vh;
+	}
+}

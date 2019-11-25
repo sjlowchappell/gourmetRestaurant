@@ -1,0 +1,35 @@
+.about {
+	background-color: $design-beige;
+
+	img {
+		display: block;
+	}
+	.rgtImg,
+	.abtText {
+		flex: 1 0 50%;
+	}
+
+	.abtText {
+		padding: 50px 5% 50px 11%;
+		.orangeText {
+			padding: 10px 0px;
+		}
+		.chefPic {
+			flex: 1 0 auto;
+			max-width: 25%;
+			filter: grayscale(1);
+		}
+		.headshot {
+			border-radius: 100%;
+		}
+		.chefTxt {
+			flex: 1 0 auto;
+			max-width: 70%;
+		}
+		.italic {
+			font-style: italic;
+			padding: 15px 0px;
+			color: black;
+		}
+	}
+}
