@@ -3,10 +3,33 @@
 	.flex-container-row {
 		padding-top: 60px;
 	}
-	.services__item {
+	&__item {
 		max-width: 23%;
 		h3 {
 			padding: 30px 0px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.services {
+		.flex-container-row {
+			flex-wrap: wrap;
+		}
+		&__item {
+			max-width: 44%;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.services {
+		.flex-container-row {
+			flex-direction: column;
+		}
+		&__item {
+			max-width: 100%;
+			padding: 20px 0px;
 		}
 	}
 }

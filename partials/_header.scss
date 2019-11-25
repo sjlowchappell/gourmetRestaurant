@@ -67,3 +67,20 @@ header {
 		padding-top: 20vh;
 	}
 }
+
+@media (max-width: 1300px) {
+	header {
+		.nav__bar {
+			left: -500px;
+		}
+		input[type='checkbox']:checked + .nav__bar {
+			max-width: 100%;
+			left: 0;
+		}
+		nav {
+			label[for='toggle'] {
+				right: 20px;
+			}
+		}
+	}
+}

@@ -33,3 +33,19 @@
 		}
 	}
 }
+
+@media (max-width: 1100px) {
+	.about {
+		&__rightImg {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.about {
+		&__content {
+			padding: 50px 15px;
+		}
+	}
+}

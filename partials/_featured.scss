@@ -53,3 +53,27 @@
 		}
 	}
 }
+
+@media (max-width: 1000px) {
+	.featured {
+		nav ul {
+			max-width: 60%;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.featured {
+		nav ul {
+			max-width: 80%;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.featured {
+		nav ul {
+			max-width: 95%;
+		}
+	}
+}

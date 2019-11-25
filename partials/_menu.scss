@@ -14,12 +14,25 @@
 		flex: 1 0 auto;
 		max-width: 45%;
 	}
-	.menu__item {
+	&__gallery-item {
 		width: 100%;
 		padding: 10px 0px;
 		p {
 			color: $design-beige;
 			font-style: italic;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.menu {
+		&__gallery {
+			flex-direction: column;
+			align-items: normal;
+			.flex-container-column {
+				max-width: 100%;
+				padding: 0px;
+			}
 		}
 	}
 }
