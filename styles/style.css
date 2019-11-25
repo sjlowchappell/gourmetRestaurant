@@ -455,15 +455,13 @@ header nav {
   top: 0;
   left: 0;
   z-index: 999;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
 }
 
 header nav input[type='checkbox'] {
   display: none;
 }
 
-header nav label[for='toggle'] {
+header nav label[for='nav--hamburger'] {
   font-size: 50px;
   position: fixed;
   top: 20px;
@@ -472,19 +470,19 @@ header nav label[for='toggle'] {
   transition: all 0.2s;
 }
 
-header nav label[for='toggle'] .fab {
+header nav label[for='nav--hamburger'] .fab {
   color: white;
 }
 
-header nav label[for='toggle']:hover {
+header nav label[for='nav--hamburger']:hover {
   cursor: pointer;
 }
 
-header nav label[for='toggle']:hover .fab {
+header nav label[for='nav--hamburger']:hover .fab {
   color: #cc5010;
 }
 
-header nav .navBar {
+header nav .nav--bar {
   background: rgba(0, 0, 0, 0.8);
   max-width: 10%;
   min-width: 120px;
@@ -495,27 +493,27 @@ header nav .navBar {
   transition: all 0.5s;
 }
 
-header nav .navBar .flex-container-column {
+header nav .nav--bar .flex-container-column {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-header nav .navBar ul {
+header nav .nav--bar ul {
   height: 250px;
 }
 
-header nav .navBar a,
-header nav .navBar p {
+header nav .nav--bar a,
+header nav .nav--bar p {
   color: #778892;
   text-align: center;
 }
 
-header nav .navBar a:hover {
+header nav .nav--bar a:hover {
   color: white;
 }
 
-header .headerContent {
+header .header--content {
   height: 90%;
   padding-top: 20vh;
 }
