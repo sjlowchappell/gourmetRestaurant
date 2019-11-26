@@ -427,7 +427,7 @@ header .header__content {
     max-width: 100%;
     left: 0;
   }
-  header nav label[for='toggle'] {
+  header nav label[for='nav__hamburger'] {
     right: 20px;
   }
 }
