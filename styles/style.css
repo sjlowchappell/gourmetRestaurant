@@ -245,9 +245,15 @@ p {
   font-size: 1.4rem;
 }
 
-.fab {
-  color: #778892;
-  padding: 0px 10px;
+.svgIcon {
+  -webkit-filter: invert(54%) sepia(13%) saturate(391%) hue-rotate(158deg) brightness(94%) contrast(91%);
+          filter: invert(54%) sepia(13%) saturate(391%) hue-rotate(158deg) brightness(94%) contrast(91%);
+  width: 15px;
+}
+
+.logoIcon {
+  width: 20px;
+  margin: 0px 10px;
 }
 
 .orangeText {
@@ -311,12 +317,15 @@ button:hover {
   background-color: #9d3d0c;
 }
 
-a:hover,
-a:hover .fas,
-a:hover .fab {
+a:hover {
   color: #cc5010;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+}
+
+a:hover .svgIcon {
+  -webkit-filter: invert(34%) sepia(78%) saturate(5131%) hue-rotate(19deg) brightness(100%) contrast(87%);
+          filter: invert(34%) sepia(78%) saturate(5131%) hue-rotate(19deg) brightness(100%) contrast(87%);
 }
 
 .featured,
@@ -363,24 +372,20 @@ header nav input[type='checkbox'] {
 }
 
 header nav label[for='nav__hamburger'] {
-  font-size: 50px;
+  width: 50px;
   position: fixed;
   top: 20px;
   right: -200px;
+  -webkit-filter: invert(100%) sepia(96%) saturate(17%) hue-rotate(278deg) brightness(103%) contrast(107%);
+          filter: invert(100%) sepia(96%) saturate(17%) hue-rotate(278deg) brightness(103%) contrast(107%);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-header nav label[for='nav__hamburger'] .fab {
-  color: white;
-}
-
 header nav label[for='nav__hamburger']:hover {
   cursor: pointer;
-}
-
-header nav label[for='nav__hamburger']:hover .fab {
-  color: #cc5010;
+  -webkit-filter: invert(34%) sepia(78%) saturate(5131%) hue-rotate(19deg) brightness(100%) contrast(87%);
+          filter: invert(34%) sepia(78%) saturate(5131%) hue-rotate(19deg) brightness(100%) contrast(87%);
 }
 
 header nav .nav__bar {

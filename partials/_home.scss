@@ -66,9 +66,14 @@ p {
 	font-size: 1.4rem;
 }
 
-.fab {
-	color: #778892;
-	padding: 0px 10px;
+.svgIcon {
+	filter: invert(54%) sepia(13%) saturate(391%) hue-rotate(158deg) brightness(94%) contrast(91%);
+	width: 15px;
+}
+
+.logoIcon {
+	width: 20px;
+	margin: 0px 10px;
 }
 
 .orangeText {
@@ -105,11 +110,12 @@ button {
 	}
 }
 
-a:hover,
-a:hover .fas,
-a:hover .fab {
+a:hover {
 	color: $design-orange;
 	transition: 0.3s all;
+}
+a:hover .svgIcon {
+	filter: invert(34%) sepia(78%) saturate(5131%) hue-rotate(19deg) brightness(100%) contrast(87%);
 }
 
 .featured,
