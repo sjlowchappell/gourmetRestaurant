@@ -27,6 +27,7 @@
 	}
 	&__gallery {
 		@include flex-container(row);
+		justify-content: center;
 		flex-wrap: wrap;
 		h4 {
 			color: white;
@@ -36,6 +37,7 @@
 		}
 		&-galleryItem {
 			flex: 1 0 275px;
+			max-width: 600px;
 			position: relative;
 			&:hover &Description {
 				display: block;
